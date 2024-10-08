@@ -182,7 +182,7 @@ namespace HospitalCharges
         //OpenWeatherMap API call method
         private async Task<string>GetWeatherData(double lat, double lon)
         {
-            string openWeatherApiKey = "ebb8b715f514d52cf9e49ccdddf19f29";
+            string openWeatherApiKey = "API_KEY";
 
             //API URL
             string apiUrl = $"http://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={openWeatherApiKey}&units=imperial"; // Using imperial units for Fahrenheit
@@ -207,7 +207,7 @@ namespace HospitalCharges
         //Geocoding API call method
         private async Task<(double lat, double lon)> GetCoordinates(string city, string state)
         {
-            string openWeatherApiKey = "ebb8b715f514d52cf9e49ccdddf19f29";
+            string openWeatherApiKey = "API_KEY";
             string query = string.IsNullOrWhiteSpace(state) ? city : $"{city},{state}";
             string url = $"http://api.openweathermap.org/geo/1.0/direct?q={query}&limit=1&appid={openWeatherApiKey}";
 
